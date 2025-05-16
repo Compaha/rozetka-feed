@@ -41,3 +41,8 @@ def feed():
 @app.route('/')
 def home():
     return '<h2>Rozetka XML feed service is running ✅</h2><p>Access feed at <a href="/feed.xml">/feed.xml</a></p>'
+
+if __name__ == '__main__':
+    import os
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
