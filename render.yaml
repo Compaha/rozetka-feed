@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: rozetka-feed-service
+    env: python
+    buildCommand: ""
+    startCommand: "python update_feed.py"
+    plan: free
+    branch: main
+    autoDeploy: false
